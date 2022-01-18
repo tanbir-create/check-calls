@@ -9,7 +9,7 @@ $('#buttons').on('click', '.btn' , function(){
     fetch(url)
     .then(response => response.json())
     .then((results)=>{
-
+         $('#table').append(`<div style="padding-bottom: 1.5em;">Total-Calls = ${results.totalCalls} </div>`)
         results.det.forEach(result => {
 
             let cl = result.status;

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1{
+    font-size: 2.5em;
+    font-weight: 800;
+}
+
+h1,
+h2,
+h3,
+h4{
+  
+  font-weight: 600;
+  /* font-size: 2em; */
+  line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-bottom: 1em;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.text-center{
+    text-align: center;
+}
+
+section{
+
+    padding: 2rem 0;
+}
+
+.container {
+    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+    width: min(90%, 75.5rem);
+}
+
+#table{
+    display: flex;
+    flex-direction: column;
+}
+
+#table div{
+    display: flex;
+    gap: 1em;
+    border-bottom: .5px solid lightgray;
+}
+
+p{
+    min-width: 25%;
+    
+}
+
+
+#buttons{
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+
+}
+
+    button {
+        color: #090909;
+        padding: 0.7em 1.7em;
+        font-size: 18px;
+        border-radius: 0.5em;
+        background: #e8e8e8;
+        border: 1px solid #e8e8e8;
+        transition: all .3s;
+        box-shadow: 6px 6px 12px #c5c5c5,
+                    -6px -6px 12px #ffffff;
+       }
+       
+       button:hover {
+        border: 1px solid white;
+       }
+       
+       button:active {
+        box-shadow: 4px 4px 12px #c5c5c5,
+                    -4px -4px 12px #ffffff;
+       }
+
+       .active-btn{
+           background-color: #121212;
+           color: white;
+       }

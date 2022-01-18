@@ -35,6 +35,8 @@ $('#buttons').on('click', '.btn' , function(){
 })
 
 
+
+
 $('#category-select').on('change', function(){
         
     let category_value = (this).options[this.selectedIndex].value.toLowerCase();

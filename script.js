@@ -2,14 +2,14 @@ $('#buttons').on('click', '.btn' , function(){
     let name = $(this).text();
     const url = `https://getcalldetails.herokuapp.com/calls/${name}`
 
-    $("#table:not(:first-child)").text('')
-
-   
-
+    $("#table:not(:first-child)").html(`<div class="lds-ring"><div></div><div></div><div></div><div></div></div>`)
+    
+    
     fetch(url)
     .then(response => response.json())
     .then((results)=>{
-         $('#table').append(`<div style="padding-bottom: 1.5em;">Total-Calls = ${results.totalCalls} </div>`)
+        $("#table:not(:first-child)").text('')
+        $('#table').append(`<div style="padding-bottom: 1.5em;">Total-Calls = ${results.totalCalls} </div>`)
         results.det.forEach(result => {
 
             let cl = result.status;

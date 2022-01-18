@@ -121,3 +121,7 @@ p{
            background-color: #121212;
            color: white;
        }
+
+button:hover, select:hover{
+  cursor: pointer;
+}

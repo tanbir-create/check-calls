@@ -1,4 +1,13 @@
-$('#buttons').on('click', '.btn' , function(){
+
+
+
+let buttons = document.querySelectorAll('.btn')
+let currentActiveBtn = null;
+buttons.forEach(button => {
+
+
+
+button.on('click', function(){
     let name = $(this).text();
     const url = `https://getcalldetails.herokuapp.com/calls/${name}`
 
@@ -24,16 +33,19 @@ $('#buttons').on('click', '.btn' , function(){
         })
     })
     
-    $('#deepak').removeClass('active-btn')
-    $('#rosy').removeClass('active-btn')
-    $('#pinkky').removeClass('active-btn')
+
+   if(currentActiveBtn){
+      currenActiveBtn.removeClass('active-btn') 
+   }
+    currentActiveBtn = $(this)
+
 
 
     $(this).addClass('active-btn')
     
     
 })
-
+})
 
 
 

@@ -2,13 +2,12 @@
 
 
 let buttonNodes = document.querySelectorAll('.btn')
-let currentActiveBtn = null;
+let currentActiveBtn;
 let buttons = [...buttonNodes]
 buttons.forEach(button => {
 
 
-
-button.on('click', function(){
+$(button).on('click', function(){
     let name = $(this).text();
     const url = `https://getcalldetails.herokuapp.com/calls/${name}`
 
@@ -35,9 +34,11 @@ button.on('click', function(){
     })
     
 
-   if(currentActiveBtn){
-      currenActiveBtn.removeClass('active-btn') 
-   }
+    if(currentActiveBtn ){
+        
+
+        $(currentActiveBtn).removeClass('active-btn') 
+    }
     currentActiveBtn = $(this)
 
 

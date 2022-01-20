@@ -107,10 +107,6 @@ section{
     border-bottom: .5px solid lightgray;
 }
 
-p{
-    /* min-width: 25%; */
-    
-}
 
 select{
   height: 40px;

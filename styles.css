@@ -12,6 +12,12 @@ body{
     line-height: 1.6;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aliceblue;
+
+    
+   
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -75,52 +81,86 @@ section{
 #table{
     display: flex;
     flex-direction: column;
+    padding-top: 1em;
+    width: min(90%, 60.5rem);
+
+}
+
+#select{
+  margin-left: auto;
+  margin-right: auto;
+  width: min(90%, 75.5rem);
+  display: flex;
+  justify-content: flex-end;
+  /* padding: .5em; */
+  padding: 1em .5em .5em .5em;
+  
+  
+
 }
 
 #table div:not(:first-child){
-    display: flex;
-    gap: 1em;
+    display: grid;
+    
+    grid-template-columns: 25% 25% 25% 25% ;
+    gap: .5em;
     border-bottom: .5px solid lightgray;
 }
 
 p{
-    min-width: 25%;
+    /* min-width: 25%; */
     
 }
 
-
+select{
+  height: 40px;
+  font-size: 1.2em;
+  margin-top:1px;
+  border: none;
+  border-style: inset;
+  border: none;
+  background-color: #f6faff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+  padding: .5em;
+  border-radius: .5em;
+  width: 24%;
+}
 #buttons{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto auto;
     gap: 1.3em;
-    padding: 1em;
+    padding: 1em .5em .5em .5em;
 
 }
 
     button {
-        color: #090909;
-        padding: 0.7em 1.7em;
-        font-size: 18px;
-        border-radius: 0.5em;
-        background: #e8e8e8;
-        border: 1px solid #e8e8e8;
-        transition: all .3s;
-        box-shadow: 6px 6px 12px #c5c5c5,
-                    -6px -6px 12px #ffffff;
-       }
-       
-       button:hover {
-        border: 1px solid white;
-       }
-       
-       button:active {
-        box-shadow: 4px 4px 12px #c5c5c5,
+      color: #090909;
+      padding: 0.7em 1.7em;
+      font-size: 18px;
+      font-weight: 500;
+      border-radius: 0.5em;
+      background-color: #f6faff;
+      border: none;
+        transition: all .25s ease-in-out;
+        box-shadow: 3px 3px 6px #c5c5c5,
+                    -4px -4px 6px #f6f6f6;
+                    
+                  }
+                  
+                  
+                  button:active {
+                    box-shadow: 4px 4px 12px #c5c5c5,
                     -4px -4px 12px #ffffff;
-       }
+                  }
+                  
+                  .active-btn{
+                    background-color: #121212;
+                    
+                    color: #f6faff;
+  box-shadow: 0 0 5px #121212;
+  text-shadow: 0 0 5px #f6faff  ;
 
-       .active-btn{
-           background-color: #121212;
-           color: white;
+                    
        }
 
 
@@ -172,7 +212,22 @@ p{
 
   @media (max-width: 768px) {
     body{
-      font-size: 13px;
+      font-size: 14px;
+      width: auto;
+    }
+    #buttons{
+    grid-template-columns: auto auto;
+
+    }
+    button{
+      padding: 0.5em 1.7em;
+
+    }
+    select{
+      width: 48%;
+    }
+    #table div:not(:first-child) {
+      grid-template-columns: 35% 25% 20% 20%;
     }
   }
     

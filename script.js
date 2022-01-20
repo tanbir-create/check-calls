@@ -1,8 +1,9 @@
 
 
 
-let buttons = document.querySelectorAll('.btn')
+let buttonNodes = document.querySelectorAll('.btn')
 let currentActiveBtn = null;
+let buttons = [...buttonNodes]
 buttons.forEach(button => {
 
 

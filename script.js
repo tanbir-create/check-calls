@@ -26,7 +26,7 @@ $(button).on('click', function(){
                         <p>${result.customer_number}</p>
                         <p>${result.status}</p>
                         <p>${result.date}</p>
-                        <p>${result.duration}sec</p>
+                        <p>${result.duration} sec</p>
                      </div>`
 
             $('#table').append(a);

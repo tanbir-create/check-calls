@@ -83,8 +83,6 @@ section{
     border-bottom: .5px solid lightgray;
 }
 
-
-
 p{
     min-width: 25%;
     
@@ -92,10 +90,10 @@ p{
 
 
 #buttons{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 2em;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1.3em;
+    padding: 1em;
 
 }
 
@@ -170,10 +168,11 @@ p{
           transform: rotate(360deg);
         }
       }
+
+
+  @media (max-width: 768px) {
+    body{
+      font-size: 13px;
+    }
+  }
     
-
-
-@media (max-width: 480px) { 
-
-body{font-size:13px;}
-}

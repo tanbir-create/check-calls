@@ -1,6 +1,5 @@
 
 
-
 let buttonNodes = document.querySelectorAll('.btn')
 let currentActiveBtn;
 let buttons = [...buttonNodes]
@@ -19,8 +18,11 @@ $(button).on('click', function(){
     .then((results)=>{
         $("#table:not(:first-child)").text('')
         $('#table').append(`<div style="padding-bottom: 1.5em;">Total-Calls = ${results.totalCalls} </div>`)
-        results.det.forEach(result => {
-
+        
+        let sortedDescendeing = results.det.sort((a, b) => new Date(b.date)  - new Date(a.date))
+       
+        sortedDescendeing.forEach(result => {
+            
             let cl = result.status;
             let a = `<div data-cl=${cl} class='all'>
                         <p>${result.customer_number}</p>
@@ -63,7 +65,7 @@ $('#category-select').on('change', function(){
        
             (function(){
                 $('#table>div').filter(function(){
-                    console.log($(this).attr('class'))
+                    
                     return  $(this).attr('data-cl') != category_value;
                     
                 })

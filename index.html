@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-     
-
 </head>
 <body>
     <div id="buttons" class="container">
@@ -21,10 +19,15 @@
 <button class="btn" id="hermeet" >Hermeet</button>
 <button class="btn" id="rajneesh" >Rajneesh</button>
 
-        
-    </div>
+</div>
 
-    <div id="select">
+
+
+<div id="select" class="select">
+    <div id="date">
+        <input type="date" name="" id="date-input">
+        <button id="find-date">+</button>
+    </div>
     <select name="category" id="category-select">
         <option value="All">All</option>
         <option value="Completed">Completed</option>
@@ -32,7 +35,9 @@
         <option value="Failed">Failed</option>
     </select>
 </div>
-    
+<div class="container"> 
+    <p id="total-calls">Total Calls</p>
+</div>
     <div id="table" class="container">
         <div>
             <p>Number</p>
@@ -46,7 +51,6 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   
     <script src="script.js"></script>
 </body>
 </html>

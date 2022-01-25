@@ -86,7 +86,7 @@ section{
 
 }
 
-#select{
+.select{
   margin-left: auto;
   margin-right: auto;
   width: min(90%, 75.5rem);
@@ -94,18 +94,27 @@ section{
   justify-content: flex-end;
   /* padding: .5em; */
   padding: 1em .5em .5em .5em;
-  
+
+  gap: 3em;
   
 
 }
+#date input{
+  border: none;
+  background-color: #f6faff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+  border-radius: .5em;
+  padding: 1em;
+}
 
-#table div:not(:first-child){
+#table div{
     display: grid;
     
-    grid-template-columns: 25% 25% 25% 25% ;
+    grid-template-columns: 25% 25% 25% 25%;
     gap: .5em;
     border-bottom: .5px solid lightgray;
 }
+
 
 
 select{
@@ -149,7 +158,7 @@ select{
                     -4px -4px 12px #ffffff;
                   }
                   
-                  .active-btn{
+                  .active-btn, #date button{
                     background-color: #121212;
                     
                     color: #f6faff;
@@ -160,7 +169,7 @@ select{
        }
 
 
-       button:hover, select:hover{
+       button:hover, select:hover, #date input{
            cursor: pointer;
        }
 
@@ -171,7 +180,7 @@ select{
         width: 150px;
         height: 150px;
         margin-top: 50px;
-        border:none;
+        border:none !important;
         margin-left: auto;
         margin-right: auto;
       }
@@ -226,4 +235,22 @@ select{
       grid-template-columns: 35% 25% 20% 20%;
     }
   }
-    
+    #date button{
+      margin-left: .5em;
+      padding: .7em .7em;
+      transition: .2s ease-in-out;
+    }
+
+    #date button:hover{
+      transform: scale(1.02);
+    }
+
+    [data-cl=completed]{
+      color: green;
+    }
+    [data-cl=no-answer]{
+      color: rgb(83, 195, 240);
+    }
+    [data-cl=failed]{
+      color: red;
+    }

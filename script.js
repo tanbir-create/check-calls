@@ -106,6 +106,6 @@ $('#find-date').click(function(){
 
 
 let userPhone  =  navigator.userAgent || navigator.vendor || window.opera;
-let x = `<p>${userPhone}</p>`
+let x = `<p>${userPhone} dkjfhskv</p>`
 $("body").append(x);
 

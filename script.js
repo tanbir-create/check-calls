@@ -126,7 +126,7 @@ function getMobileOperatingSystem() {
 }
 
 // let userPhone   = navigator.userAgent || navigator.vendor || window.opera;
-let x = `<p>${getMobileOperatingSystem()}=os, ${navigator.platform}=platform</p>`
+let x = `<p>${getMobileOperatingSystem()}=os, ${navigator.platform}=platform, ${navigator.maxTouchPoints}=max touch points</p>`
 $("body").append(x);
 
 
